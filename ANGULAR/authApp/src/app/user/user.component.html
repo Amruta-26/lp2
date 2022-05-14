@@ -1,0 +1,26 @@
+
+
+<input type="text" placeholder="Enter Username ..." class="form-control" [(ngModel)]="username">
+<input type="text" placeholder="Enter Password ..." class="form-control" [(ngModel)]="password">
+
+<div class="btn_grp">
+  <button class="btn-primary" (click)="handleAdd()"> Add User </button>
+  <button class="btn-danger" (click)="userList.pop()">Remove User</button>
+</div>
+
+<hr>
+
+<h2 class="new">Users List</h2>
+<ul class="new">
+  <span>Index</span>
+  <span>Name</span>
+  <span>Password</span>
+</ul>
+<div *ngFor="let user of userList;index as indexOfelement">
+
+  <ul class="new">
+    <span>{{indexOfelement}}</span>
+    <span>{{user.name}}</span>
+    <span>{{user.pass}}</span>
+  </ul>
+</div>

@@ -1,0 +1,10 @@
+login vagrant
+ls
+
+create file cat> trans.txt
+cat trans.txt
+scp trans.txt vagrant@<ip>:/home/vagrant 
+
+ifconfig
+ls
+cat trans.txt
